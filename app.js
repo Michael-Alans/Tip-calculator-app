@@ -1,6 +1,6 @@
 //Validating numbers of people
 
-const error = () => {
+/*const error = () => {
     const numOfPeople = document.getElementById('numOfPeople');
     numOfPeople.classList.add('errorAction');
 
@@ -22,5 +22,3 @@ function validateNumOfPeople(input) {
     errorMessage.style.display = "none";
    }
 }
-
-document.getElementById('numOfPeople').addEventListener('input', validateNumOfPeople(this));
