@@ -1,0 +1,177 @@
+:root {
+--Verydarkcyan: hsl(183, 100%, 15%);
+--Darkgrayishcyan: hsl(186, 14%, 43%);
+--Grayishcyan: hsl(184, 14%, 56%);
+--Lightgrayishcyan: hsl(185, 41%, 84%);
+--Verylightgrayishcyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+--Strongcyan: hsl(172, 67%, 45%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--Lightgrayishcyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    font-family: "Space Mono", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.logo {
+    margin: 40px;
+}
+
+.container {
+    width: 70%;
+    width: 1000px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(400px, auto);
+    background-color: var(--White);
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#display {
+    background-color: var(--Verydarkcyan);
+    padding: 29px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.calculatorContainer {
+    padding: 20px;
+}
+
+.tipAmount, .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+@media(max-width:992px) {
+    .container{
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    body {
+        height: 170vh;
+    }
+}
+
+label {
+    font-weight: 700;
+    color: var(--Darkgrayishcyan);
+}
+
+#bill, #numOfPeople {
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    padding-left: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Verylightgrayishcyan);
+    color: var(--Verydarkcyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+
+.dollar-icon-positioning {
+    background: url(images/icon-dollar.svg) no-repeat 10px center;
+    position: absolute;
+    padding-left: 30px;
+}
+
+.buttonsContainer {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-auto-rows: minmax(60px, auto);
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.buttonsContainer button {
+    background-color: var(--Verydarkcyan);
+    color: var(--White);
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+input[id="custom-number"] {
+    font-weight: 700;
+    color: var(--Verydarkcyan);
+    opacity: 0.7;
+    background-color: var(--Verylightgrayishcyan);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.person-icon-positioning {
+    background: url(images/icon-person.svg) no-repeat 10px center;
+    position: absolute;
+    padding-left: 30px;
+}
+
+.text {
+    line-height: 1px;
+}
+
+#display h4, .total h4 {
+    color: var(--White);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#display p, .total p {
+   color: var(--Grayishcyan);
+   opacity: 0.8;
+   font-weight: 700;
+   font-size: 1rem;
+}
+
+.tipCalculated, .totalCalculated {
+    font-weight: 700;
+    color: var(--Strongcyan);
+    font-size: 2.5rem;
+}
+
+#reset {
+    display: inline-block;
+    margin-top: 200px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    color: var(--Verydarkcyan);
+    font-size: 2rem;
+    background-color: var(--Strongcyan);
+    border: none;
+    border-radius: 5px;
+}
+
+.errorAction {
+    border: 3px solid red;
+}
+
+.errorMessage {
+    float: right; 
+    display: none;
+    color: red;
+}

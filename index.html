@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Space+Mono">
+</head>
+<body>
+
+  <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+
+  <main class="container">
+    <section class="calculatorContainer">
+      <form action="" id="calculator">
+        <label for="bill">Bill</label><br>
+          <input type="text" id="bill" name="bill" placeholder="0" class="dollar-icon-positioning" oninput="
+          this.value = this.value.replace(/[^0-9.]/g, '')"> <br>
+
+          <label for="">Select Tip %</label><br>
+          <div class="buttonsContainer">
+            <button id="5" type="button">5%</button>
+            <button id="10" type="button">10%</button>
+            <button id="15" type="button">15%</button>
+            <button id="25" type="button">25%</button>
+            <button id="50" type="button">50%</button>
+            <input type="number" id="custom-number" placeholder="Custom">
+          </div> 
+
+          <label for="numOfPeople">Number of People</label> <span class="errorMessage">Can't be zero</span><br>
+          <input type="text" id="numOfPeople" class="person-icon-positioning" >
+      </form>
+    </section>
+    
+    <section id="display">
+      <div class="tipAmount">
+        <div class="text">
+          <h4>Tip Amount</h4>
+          <p>/ person</p>
+        </div>
+
+        <div class="tipCalculated">
+          $
+          <span id="tipOutput">0.00</span>
+        </div>
+      </div>
+
+      <div class="total">
+        <div class="text">
+          <h4>Total</h4>
+          <p>/ person</p>
+        </div>
+
+        <div class="totalCalculated">
+          $
+          <span id="totalOutput">0.00</span>
+        </div>
+      </div>
+
+      <button type="button" id="reset">RESET</button>
+    </section>
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+</html>
